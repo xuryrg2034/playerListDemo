@@ -1,0 +1,66 @@
+@import "../../../globalStyles/variables";
+
+.mobileMenu {
+    min-height: 100vh;
+    background-color: $bg-primary-dark;
+    @include mobilePaddingContainer;
+
+    &__btnCreate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 13px;
+        &_title {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 0.04em;
+            color: $text-tertiary-dark;
+        }
+    }
+    &__list {
+        padding-top: 2px;
+    }
+    &__bottom {
+        padding-top: 28px;
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $text-grey;
+        &:before {
+            background-image: url("data:image/svg+xml,%3Csvg width='7' height='11' viewBox='0 0 7 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.30859 10.8613C1.46094 10.8613 1.58984 10.8027 1.68945 10.7031L6.33594 6.16211C6.44727 6.05078 6.50586 5.91602 6.50586 5.76953C6.50586 5.61719 6.44727 5.47656 6.33594 5.37695L1.69531 0.841797C1.58984 0.736328 1.46094 0.677734 1.30859 0.677734C1.00391 0.677734 0.775391 0.912109 0.775391 1.2168C0.775391 1.35742 0.833984 1.49805 0.927734 1.59766L5.19336 5.76953L0.927734 9.94141C0.833984 10.041 0.775391 10.1758 0.775391 10.3223C0.775391 10.627 1.00391 10.8613 1.30859 10.8613Z' fill='%23C1C2C4' fill-opacity='0.3'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    .playerLists__item {
+        &:after {
+            content: '';
+            position: absolute;
+            right: 2px;
+            top: 0;
+            bottom: 0;
+            width: 9px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='7' height='11' viewBox='0 0 7 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.30859 10.8613C1.46094 10.8613 1.58984 10.8027 1.68945 10.7031L6.33594 6.16211C6.44727 6.05078 6.50586 5.91602 6.50586 5.76953C6.50586 5.61719 6.44727 5.47656 6.33594 5.37695L1.69531 0.841797C1.58984 0.736328 1.46094 0.677734 1.30859 0.677734C1.00391 0.677734 0.775391 0.912109 0.775391 1.2168C0.775391 1.35742 0.833984 1.49805 0.927734 1.59766L5.19336 5.76953L0.927734 9.94141C0.833984 10.041 0.775391 10.1758 0.775391 10.3223C0.775391 10.627 1.00391 10.8613 1.30859 10.8613Z' fill='%23C1C2C4' fill-opacity='0.3'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    &__logout {
+        .header__link {
+            padding: 6px 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    .header {
+        &__email {
+            margin-top: 15px;
+        }
+    }
+}

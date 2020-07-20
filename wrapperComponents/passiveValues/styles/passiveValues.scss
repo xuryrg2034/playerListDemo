@@ -1,0 +1,13 @@
+.passiveValues__inputWrapper {
+    &:last-of-type {
+        .customElem__label {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .customElem__input {
+        padding-right: 7px;
+    }
+}

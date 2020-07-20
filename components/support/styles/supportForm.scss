@@ -1,0 +1,97 @@
+@import "../../../globalStyles/variables";
+
+.supportForm {
+    max-width: 548px;
+    width: 100%;
+    &__email {
+        .customElem {
+            &__label {
+                &:before {
+                    display: none;
+                }
+            }
+            &__input {
+                color: $text-primary;
+                font-weight: 800;
+                font-size: 28px;
+                line-height: 42px;
+                text-align: left;
+                padding: 0;
+                &::placeholder {
+                    color: $text-tertiary;
+                    font-weight: 800;
+                    font-size: 28px;
+                    line-height: 42px;
+                }
+            }
+        }
+    }
+    &__description {
+        margin-top: 22px;
+        height: 281px;
+        margin-bottom: 10px;
+
+        .ck-editor-custom-style {
+            height: 100%;
+        }
+    }
+}
+
+.supportWidget {
+    &__link {
+        display: block;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 990;
+        box-shadow: $box-shadow;
+        background-color: $bg-secondary;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: background-color 0.175s ease-in-out;
+        &:hover {
+            background-color: $highlight;
+            svg {
+                path {
+                    fill: $bg-secondary
+                }
+            }
+        }
+        svg {
+            width: 30px;
+            height: 30px;
+            path {
+                fill: $highlight;
+                transition: fill 0.175s ease-in-out;
+            }
+        }
+    }
+
+    &-mobile {
+        .supportWidget__btn {
+            right: 14px;
+            bottom: 14px;
+        }
+    }
+}
+
+
+.supportFormSkeleton {
+    .supportFormSkeleton__title {
+        background-color: $bg-secondary;
+        height: 42px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .supportFormSkeleton__description {
+        background-color: $bg-secondary;
+    }
+}

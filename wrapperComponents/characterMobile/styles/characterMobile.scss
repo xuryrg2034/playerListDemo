@@ -1,0 +1,33 @@
+@import "../../../globalStyles/variables";
+
+.characterMobile {
+    padding-bottom: 90px;
+    box-sizing: content-box;
+    .personalInfo__name {
+        @include mobilePaddingContainer;
+        margin-left: -2px;
+        //margin-right: -2px;
+        margin-top: 14px;
+    }
+
+    .avatarBlock {
+        width: 100vw;
+        height: 100vw;
+        svg {
+            width: 100%;
+            height: 75%;
+        }
+    }
+
+    .headerMobile {
+        justify-content: space-between;
+        margin-bottom: 0;
+        &__rightBtn {
+            position: static !important;
+            transform: none !important;
+        }
+        .btnDeleteCharacter {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import "../../../globalStyles/variables";
+
+.attributesMobile {
+    padding-bottom: 90px;
+    overflow: hidden;
+    @include mobilePaddingContainer;
+
+    .playerListContainer__block {
+        padding: 0;
+    }
+
+    .levelBlock {
+        margin-bottom: 30px;
+        &__level {
+            margin-bottom: 7px;
+            .customElem__label:before {
+                display: none;
+            }
+        }
+
+        .customElem__input {
+            padding-right: 6px;
+        }
+    }
+
+    .fightInfo {
+        &__right {
+            .customElem__label {
+                padding-right: 8px;
+            }
+        }
+        &__left {
+            padding-right: 8px;
+            .customElem__input-wrapper {
+                width: 44px;
+                padding-left: 0;
+                &:before {
+                    left: -2px;
+                }
+            }
+        }
+    }
+
+    .characteristicsBlock {
+        margin-top: 26px;
+        margin-bottom: 28px;
+        &__row,
+        &__header {
+            padding-right: 6px;
+        }
+        &__row {
+            position: relative;
+            margin-right: 0;
+            margin-left: 0;
+            padding-left: 0;
+            &:hover {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -14px;
+                    right: -14px;
+                    height: 64px;
+                    background-color: $bg-primary;
+                    box-shadow: $box-shadow;
+                    z-index: 10;
+                }
+
+                .characteristicsBlock {
+                    &__row {
+                        &_left,
+                        &_right {
+                            position: relative;
+                            z-index: 15;
+                        }
+                    }
+                }
+
+                .characteristicsBlock__savingThrowsBonus_toggleElem {
+                    position: absolute;
+                    top: auto;
+                    right: 0;
+                    bottom: -22px;
+                }
+            }
+            &:last-of-type {
+                border: none;
+            }
+        }
+    }
+
+    .skillsBlock {
+        &-wrapper {
+            &:last-of-type {
+                border: none;
+            }
+        }
+        &__row {
+            &:hover {
+                margin-right: 0;
+                padding-right: 0;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -14px;
+                    right: -14px;
+                    height: 64px;
+                    background-color: $bg-primary;
+                    box-shadow: $box-shadow;
+                    z-index: 10;
+                }
+
+                .skillsBlock__item {
+                    &_left,
+                    &_right {
+                        position: relative;
+                        z-index: 15;
+                    }
+                    &_toggleElem {
+                        position: absolute;
+                        right: 0;
+                        bottom: -22px;
+                        &-absolute {
+                            position: relative;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

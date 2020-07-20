@@ -1,0 +1,49 @@
+.personalInfo {
+    display: flex;
+    &__name {
+        margin-top: -3px;
+        margin-bottom: 10px;
+
+        .customElem {
+            &__label {
+                padding-bottom: 5px;
+                padding-top: 5px;
+                &:before {
+                    display: none;
+                }
+            }
+            &__input {
+                text-align: left;
+                padding-left: 0;
+                font-weight: 800;
+                font-size: 28px;
+                line-height: 32px;
+                &::placeholder {
+                    font-weight: 800;
+                    font-size: 28px;
+                    line-height: 32px
+                }
+            }
+        }
+    }
+
+    &__left,
+    &__right {
+        width: 50%;
+    }
+
+    &__left {
+        padding-right: 28px;
+
+        @media screen and (max-width: 1320px) {
+            width: 40%;
+        }
+    }
+    &__right {
+        padding-left: 27px;
+
+        @media screen and (max-width: 1320px) {
+            width: 60%;
+        }
+    }
+}

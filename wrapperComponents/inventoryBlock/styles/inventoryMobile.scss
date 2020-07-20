@@ -1,0 +1,149 @@
+@import "../../../globalStyles/variables";
+
+.inventoryMobile {
+    padding-bottom: 90px;
+
+    .headerMobile {
+        position: sticky;
+        top: 0;
+        background-color: $bg-primary;
+        z-index: 20;
+
+        .btnGoBack {
+            left: 14px;
+        }
+
+        .headerMobile__rightBtn {
+            right: 14px;
+        }
+    }
+
+    .equippedItem {
+        &-wrapper {
+            margin: 0;
+            margin-top: -12px;
+            margin-bottom: 32px;
+            @include mobilePaddingContainer;
+        }
+
+        &-table {
+            width: 100%;
+        }
+
+        &__filterWrapper {
+            @include mobilePaddingContainer;
+            .equippedItem {
+                &__filter {
+                    padding-left: 4px;
+                }
+                &__btnCreate {
+                    display: none;
+                }
+            }
+        }
+        &__cell {
+            &-penetration {
+                width: 56px;
+            }
+        }
+    }
+
+    .itemsContainer {
+        margin-top: 14px;
+        margin-right: 0;
+        @include mobilePaddingContainer;
+
+        &__customScroll {
+            padding-right: 0;
+            max-height: none !important;
+        }
+    }
+
+    .createItemPopup {
+        margin-top: 0;
+        min-height: 100vh;
+        padding: 0;
+        padding-bottom: 90px;
+        @include mobilePaddingContainer;
+    }
+
+    .itemBonusBlock {
+        &__table {
+            width: 100%;
+        }
+    }
+
+    .magicSpellPopup {
+        &__form {
+            &_left {
+                width: 100%;
+                min-height: auto;
+                padding-bottom: 0;
+            }
+            &_right {
+                padding-left: 0;
+            }
+            &_section {
+                display: block;
+            }
+        }
+        &__header {
+            padding-top: 7px;
+            margin-bottom: 15px;
+            &_right {
+                padding-left: 10px;
+                padding-top: 0px;
+            }
+        }
+
+        .options-wrapper {
+
+        }
+    }
+
+
+    .popupBlock__shortDescription,
+    .ck-editor-custom-style {
+        height: auto;
+    }
+
+    .popupBlock__shortDescription {
+        border-bottom: 1px solid $separator;
+    }
+
+    .popupWrapper__customScroll > div:nth-child(1) {
+        padding-bottom: 0;
+    }
+
+    .popupItem__headerMobile {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        .popupBlock__submitBtn {
+            display: block;
+            position: static;
+        }
+        .btnGoBack {
+            left: 0;
+        }
+    }
+
+    .formikLabelWithCheck {
+        margin-right: 17px;
+    }
+
+    .formItemSkeleton {
+        .popupBlock {
+            padding-top: 40px;
+            left: 0;
+        }
+
+        .popupBlock__shortDescription {
+            display: none;
+        }
+
+        .magicSpellPopup__form_right {
+            height: 200px;
+        }
+    }
+}

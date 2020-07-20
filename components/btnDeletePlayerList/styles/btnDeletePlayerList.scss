@@ -1,0 +1,14 @@
+@import '../../../globalStyles/variables';
+
+.btnDeleteCharacter {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $highlight;
+    cursor: pointer;
+    transition: opacity .175s ease-in-out;
+    &:hover {
+        opacity: 0.8;
+    }
+}

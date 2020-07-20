@@ -1,0 +1,107 @@
+@import "../../../globalStyles/variables";
+
+.playerLists {
+    position: relative;
+    &:hover {
+        .playerLists__container {
+            display: block;
+        }
+    }
+    &__container {
+        display: none;
+        position: absolute;
+        top: calc(100% + 4px);
+        left: -4px;
+        width: 307px;
+        background-color: $bg-primary-dark;
+        border: 1px solid rgba(193, 194, 196, 0.1);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+        padding: 18px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 34px;
+            transform: translateY(-100%);
+        }
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5px 0px;
+        &:last-of-type {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            bottom: 0;
+            right: 0;
+            background: rgba(193, 194, 196, 0.1);
+            height: 1px;
+        }
+        &_img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            img {
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        &_title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: $text-grey;
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+        &_title {
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: 0.04em;
+            color: $text-tertiary-dark;
+        }
+        &_addNewCharacter {
+            position: relative;
+            cursor: pointer;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                bottom: -5px;
+                left: -5px;
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill-opacity: 1;
+                    }
+                }
+            }
+            &[disabled] {
+                opacity: 0.5;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            svg {
+                path {
+                    transition: 0.175s ease-in-out;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@import "../../../globalStyles/variables";
+
+.spellBookMobile {
+    padding-bottom: 90px;
+
+    .magicCellItem {
+        width: 100%;
+        &__infoWrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__viewCells {
+            margin-top: 0;
+        }
+        &__dropdown {
+            position: fixed;
+            z-index: 10;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: auto;
+            width: auto;
+            box-shadow: $box-shadow-dropdownMobile;
+            background-color: $bg-color-dropdownMobile;
+            @include mobilePaddingContainer;
+        }
+    }
+
+    .headerMobile {
+        position: sticky;
+        top: 0;
+        background-color: $bg-primary;
+        z-index: 20;
+
+        .btnGoBack {
+            left: 14px;
+        }
+
+        .headerMobile__rightBtn {
+            right: 14px;
+        }
+    }
+
+    .magicSpellPopup {
+        margin-top: 0;
+        min-height: 100vh;
+        padding: 0;
+        padding-bottom: 90px;
+        @include mobilePaddingContainer;
+        &__form {
+            &_left {
+                width: 100%;
+                min-height: auto;
+                padding-bottom: 0;
+            }
+            &_right {
+                padding-left: 0;
+            }
+            &_section {
+                display: block;
+            }
+        }
+        &__header {
+            padding-top: 7px;
+            margin-bottom: 15px;
+            &_right {
+                padding-left: 10px;
+                padding-top: 0px;
+            }
+        }
+    }
+
+    .popupBlock__shortDescription,
+    .ck-editor-custom-style {
+        height: auto;
+    }
+
+    .popupBlock__shortDescription {
+        border-bottom: 1px solid $separator;
+    }
+
+    .formikLabelWithCheck {
+        margin-right: 17px;
+        margin-bottom: 2px;
+    }
+
+    .createItemPopup {
+        margin-top: 0;
+        min-height: 100vh;
+        padding: 0;
+        padding-bottom: 90px;
+        @include mobilePaddingContainer;
+    }
+
+    .formMagicSkeleton {
+        .popupBlock {
+            padding-top: 40px;
+            left: 0;
+        }
+
+        .popupBlock__shortDescription {
+            display: none;
+        }
+
+        .magicSpellPopup__form_right {
+            height: 200px;
+        }
+    }
+
+    .magicSpellBlock {
+        display: block;
+        &__left {
+            position: sticky;
+            top: 40px;
+            background: $bg-primary;
+            z-index: 5;
+            margin-right: 0;
+            margin-left: -14px;
+            margin-right: -14px;
+            margin-bottom: 8px;
+            @include mobilePaddingContainer;
+        }
+        &__header,
+        &__list {
+            @include mobilePaddingContainer;
+            margin: 0;
+        }
+
+        &__filter {
+            padding-left: 4px;
+        }
+
+        &__list {
+            &_customScroll {
+                padding-right: 0;
+                max-height: none !important;
+                overflow: unset !important;
+                > div:nth-child(1) {
+                    overflow: unset !important;
+                    max-height: none !important;
+                }
+            }
+        }
+    }
+
+    .magicClasses__classes {
+        @include mobilePaddingContainer;
+        margin: 0;
+    }
+}

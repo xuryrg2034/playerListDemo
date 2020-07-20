@@ -1,0 +1,121 @@
+@import "../../../../globalStyles/variables";
+
+.itemsContainer {
+    margin-top: 12px;
+    margin-right: -10px;
+    &__customScroll {
+        padding-right: 30px;
+    }
+}
+
+.equippedItem {
+    display: table-row;
+    width: 100%;
+    transition: opacity 0.175s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+    &:last-of-type {
+        .equippedItem__cell {
+            border-bottom: none;
+        }
+    }
+    &-table {
+        display: table;
+    }
+    &-wrapper {
+        margin: -18px;
+        padding: 16px 18px 5px;
+        background-color: $bg-secondary;
+        margin-bottom: 18px;
+    }
+    &__filter {
+        display: flex;
+    }
+    &__btnCreate {
+        position: relative;
+        transition: opacity 0.175s ease-in-out;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            bottom: -4px;
+            left: -4px;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__filterWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header {
+        display: table-row;
+        &_damage,
+        &_penetration {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: right;
+            letter-spacing: 0.04em;
+            color: $text-tertiary;
+        }
+
+        .equippedItem__cell {
+            border: none;
+            padding-top: 0;
+            padding-bottom: 3px;
+        }
+    }
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        font-weight: 500;
+        color: $text-primary;
+        width: 179px;
+    }
+
+    &__characteristic,
+    &__damage,
+    &__penetration {
+        color: $text-secondary;
+        letter-spacing: 0.06em;
+    }
+
+    &__title,
+    &__characteristic,
+    &__damage,
+    &__penetration {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__cell {
+        display: table-cell;
+        border-bottom: 1px solid $separator;
+        padding-bottom: 9px;
+        padding-top: 9px;
+        &-title {
+            width: 179px;
+            padding-right: 15px;
+        }
+        &-characteristic {
+            width: 50px;
+        }
+        &-damage {
+            text-align: right;
+            width: 156px;
+        }
+        &-penetration {
+            text-align: right;
+            width: 45px;
+        }
+    }
+}

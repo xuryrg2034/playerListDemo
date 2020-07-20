@@ -1,0 +1,59 @@
+@import "../../globalStyles/variables";
+
+.customCheckbox {
+    &__input {
+        display: none;
+        &-wrapper {
+            cursor: pointer;
+            display: block;
+        }
+    }
+    &__ui {
+        &_check {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            border: 1px solid $text-tertiary;
+            background-color: $bg-secondary;
+            transform-origin: center;
+            transform: rotate(45deg);
+            margin-right: 0;
+            &-circle {
+                border-radius: 100%;
+                &:before {
+                    border-radius: 100%;
+                }
+            }
+            &.customCheckbox__ui_check-active:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: $highlight;
+            }
+        }
+    }
+}
+
+.formikLabelWithCheck {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 24px;
+    &__text {
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $text-primary;
+        margin-left: 10px;
+    }
+    .customCheckbox__input-wrapper {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,80 @@
+@import "../../globalStyles/variables";
+
+.customElem {
+    &__label {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $separator;
+        }
+        //&:last-of-type:not(:first-of-type) {
+        //    border: none;
+        //    &:before {
+        //        display: none;
+        //    }
+        //}
+        &-withOutLabel {
+            .customElem__input {
+                text-align: left;
+                padding: 0;
+            }
+        }
+        &-focus.customElem__label {
+            background-color: $bg-tertiary;
+            &:before {
+                display: block !important;
+                height: 4px;
+                background-color: $highlight;
+            }
+        }
+        &_text {
+            white-space: nowrap;
+            cursor: pointer;
+            color: $text-secondary;
+            letter-spacing: 0.02em;
+        }
+    }
+    &__input {
+        background: none;
+        text-align: right;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
+        padding-left: 15px;
+        color: $text-primary;
+
+        &::placeholder {
+            color: $text-tertiary;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &-wrapper {
+            width: 100%;
+        }
+    }
+    &__btn {
+        color: $highlight;
+        transition: opacity 0.175s ease-in-out;
+        cursor: pointer;
+        &[disabled] {
+            cursor: pointer;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

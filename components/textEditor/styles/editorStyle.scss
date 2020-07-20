@@ -1,0 +1,373 @@
+@import "../../../globalStyles/variables";
+
+.ck-editor-custom-toolbar {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    height: 0;
+}
+
+.ck-editor-custom-style {
+    height: auto;
+    overflow: visible;
+    margin: 0 -8px;
+    position: relative;
+    .ck.ck-editor__editable_inline:hover {
+        background-color: $separator;
+    }
+    .ck-content {
+        height: auto;
+
+        .ck-placeholder {
+            color: $text-secondary !important;
+        }
+    }
+
+    .ck.ck-toolbar {
+        // max-width: none !important;
+    }
+
+    .ck.ck-balloon-panel {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: 0;
+        bottom: 0;
+        border-radius: 4px;
+        box-shadow: $box-shadow;
+        background-color: $bg-primary;
+        // overflow: hidden;
+        transform: translateY(-100%);
+    }
+
+    .ck.ck-editor__editable_inline>:first-child {
+        margin-top: 0;
+    }
+}
+
+.ck-balloon-rotator__content {
+    background-color: $bg-primary;
+}
+
+.ck .ck-link_selected {
+    background: none;
+}
+
+.ck.ck-balloon-panel[class*=arrow_s]:before {
+    border-top-color: $separator;
+    opacity: 0.5;
+}
+
+.ck.ck-balloon-panel.ck-toolbar-container[class*=arrow_s]:after {
+    border-top-color: $bg-primary;
+}
+
+.ck-editor-custom-style .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+    border: none!important;
+    box-shadow: none;
+    background-color: rgba(214,207,193,.7)
+}
+
+.ck-editor-custom-style .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-rounded-corners {
+    border-radius: 0
+}
+
+.ck-editor-custom-style .ck.ck-editor__editable_inline {
+    //padding: 4px 8px;
+    //margin: 0 -8px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    margin: 0;
+    border: none
+}
+
+.ck-editor-custom-style .ck.ck-editor__editable_inline>:last-child {
+    margin: 0;
+}
+
+.ck-editor-custom-style .ck-content h2 {
+    font-size: 1.68em;
+    line-height: 1.68em;
+    font-weight: 400
+}
+
+.ck-editor-custom-style .ck-content h3 {
+    font-size: 1.36em;
+    line-height: 1.5em;
+    font-weight: 400
+}
+
+.ck-editor-custom-style .ck-content h4 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-bottom: .2em;
+    font-weight: 400
+}
+
+.ck-editor-custom-style .ck-content {
+    font-size: 16px;
+    line-height: 23px;
+    p,
+    ul,
+    ol,
+    td {
+        color: $text-primary !important;
+    }
+}
+
+.ck-content blockquote {
+    border-color: $highlight;
+}
+
+.ck-editor-custom-style .ck-content ol,.ck-editor-custom-style .ck-content ul {
+    padding-left: 20px
+}
+
+.ck-editor-custom-style .ck-content ul {
+    list-style: disc
+}
+
+.ck-editor-custom-style .ck-content i {
+    font-style: italic
+}
+
+.ck-editor-custom-style .ck-content strong {
+    font-weight: 600
+}
+
+.ck-editor-custom-style .ck-content a {
+    color: $highlight
+}
+
+.ck.ck-button {
+    padding: 0;
+    border: 0;
+    min-width: 25px;
+    min-height: 25px;
+    cursor: pointer
+}
+
+.ck.ck-ico {
+    width: 25px;
+    height: 25px
+}
+
+[dir=ltr] .ck.ck-dropdown .ck-button.ck-dropdown__button:not(.ck-button_with-text) {
+    padding-left: 0
+}
+
+[dir=ltr] .ck.ck-dropdown .ck-button.ck-dropdown__button:not(.ck-button_with-text) .ck-dropdown__arrow {
+    display: none
+}
+
+.ck.ck-icon {
+    font-size: 0.5em;
+}
+
+//.ck-toolbar_grouping .ck.ck-icon :not([fill]) {
+//    fill: transparent
+//}
+
+.ck.ck-button.ck-switchbutton .ck-button__toggle:hover .ck-button__toggle__inner {
+    box-shadow: none;
+}
+
+.ck .ck-insert-table-dropdown-grid-box.ck-on {
+    background: rgba($highlight, 0.5);
+    border-color: $highlight;
+}
+
+
+//
+//[aria-label="Editor toolbar"] .ck.ck-icon {
+//    width: 25px;
+//    height: 25px
+//}
+
+.ck.ck-button.ck-disabled:active {
+    box-shadow: none
+}
+
+.ck.ck-button:active {
+    outline: none;
+    border: none
+}
+
+.ck.ck-button.ck-on,.ck.ck-button.ck-on:not(.ck-disabled):hover,.ck.ck-button:not(.ck-disabled):active,.ck.ck-button:not(.ck-disabled):hover {
+    background-color: rgba(214,207,193,.7)
+}
+
+.ck.ck-balloon-panel.ck-balloon-panel_visible {
+    //background: #fff8eb;
+    //box-shadow: 0 6px 20px rgba(0,0,0,.15)
+}
+
+.ck.ck-balloon-panel[class*=arrow_n]:after {
+    border-bottom-color: #fff8eb
+}
+
+.ck.ck-balloon-panel[class*=arrow_n]:before {
+    border-bottom-color: rgba(56,48,44,.05)
+}
+
+.ck.ck-button.ck-button-save path {
+    fill: #9c4646
+}
+
+.ck.ck-button.ck-button-cancel path {
+    fill: rgba(56,48,44,.4)
+}
+
+.ck.ck-button.ck-switchbutton.ck-on .ck-button__toggle,.ck.ck-button.ck-switchbutton.ck-on .ck-button__toggle:hover {
+    background: #9c4646
+}
+
+.ck.ck-button.ck-switchbutton .ck-button__toggle {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%!important;
+    background: none!important;
+    border: 1px solid rgba(56,48,44,.4)
+}
+
+.ck.ck-button.ck-switchbutton .ck-button__toggle .ck-button__toggle__inner {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%!important;
+    background: none!important;
+    -webkit-transform: none!important;
+    transform: none!important;
+    -webkit-transition: none;
+    transition: none
+}
+
+.ck.ck-link-actions .ck-button.ck-link-actions__preview .ck-button__label {
+    color: #9c4646
+}
+
+[dir=ltr] .ck.ck-button.ck-switchbutton.ck-on .ck-button__toggle .ck-button__toggle__inner {
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%)!important;
+    transform: translate(-50%,-50%)!important;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    background: #9c4646!important;
+    margin: 0!important
+}
+
+.ck-balloon-rotator .ck.ck-input-text {
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid rgba(56,48,44,.1);
+    box-sizing: content-box;
+    padding: 0;
+    -webkit-transition: none;
+    transition: none;
+    border-radius: 0
+}
+
+.ck-balloon-rotator .ck.ck-input-text:focus {
+    margin-bottom: -3px;
+    border-color: #9c4646;
+    border-width: 4px;
+    background: rgba(214,207,193,.7)
+}
+
+.ck.ck-balloon-panel {
+    border: none;
+    // background-color: transparent;
+    padding: 0;
+    box-shadow: $box-shadow;
+}
+
+.ck.ck-toolbar {
+    padding: 0;
+    background-color: #f4eee1
+}
+
+.ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__button .ck-button__label {
+    width: 23px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.ck.ck-button.ck-button_with-text {
+    padding: 0
+}
+
+.ck.ck-list {
+    // background: #fff8eb;
+    background-color: #fff;
+    padding: 9px 18px
+}
+
+.ck.ck-dropdown .ck-dropdown__panel.ck-dropdown__panel_se {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15)
+}
+
+.ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list {
+    border-radius: 0
+}
+
+.ck.ck-list__item .ck-button.ck-on {
+    background: none;
+    color: #9c4646
+}
+
+.ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__panel .ck-list__item {
+    min-width: 120px
+}
+
+.ck.ck-toolbar .ck.ck-toolbar__separator {
+    background: none;
+    width: 20px
+}
+
+.ck.ck-list__item .ck-button.ck-on:hover:not(.ck-disabled),.ck.ck-list__item .ck-button:hover:not(.ck-disabled) {
+    background: none
+}
+
+.ck.ck-toolbar>.ck-toolbar__items {
+    padding-right: 8px
+}
+
+.ck.ck-toolbar>.ck-toolbar__items>* {
+    margin: 0
+}
+
+.ck-heading-dropdown .ck.ck-button {
+    padding-left: 8px;
+    padding-right: 8px
+}
+
+.ck-dropdown__arrow path {
+    fill: rgba(56,48,44,.4)!important
+}
+.ck.ck-dropdown .ck-dropdown__arrow {
+    display: none;
+}
+[dir=ltr] .ck.ck-dropdown .ck-dropdown__arrow {
+    margin-left: 0;
+    display: block;
+}
+
+.ck.ck-list__item .ck-button .ck-button__label {
+    line-height: 1
+}
+
+.ck.ck-list__item .ck.ck-button.ck-button_with-text {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(56,48,44,.1);
+    cursor: pointer
+}
+
+.ck.ck-list__item:last-of-type .ck.ck-button {
+    border: none
+}

@@ -1,0 +1,24 @@
+@import "../../../globalStyles/variables";
+
+.playerListContainer-skeleton {
+    &__avatar {
+        width: 268px;
+        height: 268px;
+        background-color: $bg-tertiary;
+    }
+    &__info {
+        height: 392px;
+    }
+    &__health {
+        height: 175px;
+    }
+    &__inventory {
+        height: 134px;
+    }
+    &__notes {
+        height: 55px;
+    }
+    &__spells {
+        height: 134px;
+    }
+}

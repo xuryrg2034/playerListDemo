@@ -1,0 +1,312 @@
+@import "../../globalStyles/variables";
+
+.custom-select {
+    position: relative;
+    /*margin: 0.5rem 0;*/
+}
+
+.field {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    padding: 8px;
+}
+
+.custom-select.open .field {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.display {
+    flex: 1;
+}
+
+.button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin: -8px;
+    padding: 0 12px;
+    font-size: 20px;
+}
+
+.custom-select.open .button,
+.button:hover {
+    color: coral;
+}
+
+.options {
+    background: white;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    left: 0;
+    position: absolute;
+    padding: 8px 0;
+    right: 0;
+    top: 100%;
+    z-index: 3;
+    max-height: 200px;
+    overflow: auto;
+    &-wrapper {
+        &-withBtnCallback {
+            .options {
+                padding-bottom: 46px !important;
+                &__customSelect {
+                    &:nth-child(3) {
+
+                    }
+                }
+            }
+
+        }
+    }
+    &__btnCallback {
+        background-color: $bg-primary;
+        padding-left: 27px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        &_btn {
+            color: $highlight;
+            transition: opacity 0.175s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+    }
+}
+
+.option {
+    cursor: pointer;
+    padding: 8px;
+}
+
+.option.active {
+    background: rgba(255, 127, 80, 0.4)
+}
+
+.option:hover {
+    background: rgba(255, 127, 80, 0.25);
+}
+
+.overlay {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.custom-icon-select {
+    padding: 0;
+    .field {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        padding: 0;
+        box-sizing: content-box;
+        border: 3px solid transparent;
+        border-radius: 0;
+    }
+    .display {
+        flex: none;
+        cursor: pointer;
+        background-color: #f4eee1;
+        padding: 0;
+        width: 100%;
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .button {
+        position: absolute;
+        bottom: 1px;
+        right: 5px;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.309 5.992a.75.75 0 00.545-.246l4.453-4.559a.668.668 0 00.199-.486.69.69 0 00-.692-.697.715.715 0 00-.503.21L5.314 4.323 1.307.215A.73.73 0 00.803.004.69.69 0 00.11.7c0 .194.07.358.2.487L4.77 5.745a.725.725 0 00.539.246z' fill='%2338302C' fill-opacity='.4'/%3E%3C/svg%3E");
+    }
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $bg-primary;
+        box-shadow: $box-shadow;
+        border: none;
+        padding: 8px 12px;
+        margin-top: -3px;
+        margin-left: 3px;
+        width: 252px;
+        max-height: 270px;
+    }
+
+    .option {
+        padding: 0;
+        margin: 6px;
+        width: 64px;
+        height: 64px;
+        background-color: #f4eee1;
+        &.active,
+        &:hover {
+            background-color: $bg-tertiary;
+        }
+        img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.custom-select {
+    &__label {
+        color: $text-secondary;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: .02em;
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 9px 0;
+        }
+    }
+}
+
+.custom-list-select {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: $separator;
+    }
+
+    .field {
+        border: none;
+        padding: 0;
+    }
+
+    .display {
+        padding-right: 27px;
+        color: $text-primary;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .button {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        right: 5px;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.309 5.992a.75.75 0 00.545-.246l4.453-4.559a.668.668 0 00.199-.486.69.69 0 00-.692-.697.715.715 0 00-.503.21L5.314 4.323 1.307.215A.73.73 0 00.803.004.69.69 0 00.11.7c0 .194.07.358.2.487L4.77 5.745a.725.725 0 00.539.246z' fill='%2338302C' fill-opacity='.4'/%3E%3C/svg%3E");
+    }
+
+    .options {
+        margin: 0;
+        padding: 0;
+        background: none;
+        position: static;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        overflow: auto;
+        max-width: 280px;
+        min-width: 260px;
+        max-height: 197px;
+        padding-top: 7px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        &-wrapper {
+            margin-top: -3px;
+            left: auto;
+            right: -18px;
+            position: absolute;
+            background-color: $bg-primary;
+            box-shadow: $box-shadow;
+            overflow: auto;
+            z-index: 20;
+        }
+
+        &__customSelect {
+            > div {
+                &:nth-child(1) {
+                    padding: 14px 19px;
+                    padding-right: 38px;
+                }
+                &:nth-child(3) {
+                    bottom: 15px !important;
+                }
+            }
+
+            .track-vertical {
+                right: 0;
+                top: 5px;
+                bottom: 15px;
+                border-radius: inherit;
+            }
+        }
+    }
+
+    .option {
+        position: relative;
+        border-bottom: 1px solid $separator;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $text-primary;
+        padding-top: 9px;
+        padding-bottom: 8px;
+        &:before {
+            display: none;
+            content: "";
+            position: absolute;
+            top: calc(50% - 6px);
+            transform: rotate(45deg);
+            border: 1px solid rgba($highlight, 0.8);
+            opacity: .5;
+            width: 12px;
+            height: 12px;
+            right: 4px;
+        }
+        &:last-of-type {
+            border: none;
+        }
+        &:hover {
+            background: none;
+            &:before {
+                display: block;
+            }
+        }
+        &.active {
+            background: none;
+            &:before {
+                display: block;
+                opacity: 1;
+                border-color: $highlight;
+                background-color: $highlight;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import "../../../globalStyles/variables";
+
+.magicSpellPopup {
+    max-width: 908px;
+    height: 480px;
+    padding: 29px;
+    &__header {
+        display: flex;
+        margin-bottom: 22px;
+        &_left {
+            display: flex;
+        }
+        &_right {
+            padding-left: 15px;
+            padding-top: 3px;
+        }
+    }
+    &__form {
+        &_section {
+            display: flex;
+            padding-left: 3px;
+        }
+        &_left {
+            width: calc(36% + 3px);
+            flex-shrink: 0;
+            padding-bottom: 50px;
+
+            //.ck-editor-custom-style {
+            //    .ck-content {
+            //        max-height: 200px;
+            //    }
+            //}
+        }
+        &_right {
+            width: 100%;
+            padding-left: 52px;
+            .ck-editor-custom-style {
+                height: 300px;
+            }
+        }
+    }
+
+    .popupBlock__submitBtn {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+    }
+
+    .popupBlock__inputTitle-wrapper {
+        .customElem__input {
+            line-height: 32px;
+        }
+    }
+}
+
+
+.formMagicSkeleton {
+    &__icon {
+        width: 64px;
+        height: 64px;
+        background-color: $bg-secondary;
+        margin-right: 10px;
+    }
+
+    .magicSpellPopup {
+        &__header {
+            &_right {
+                width: 100%;
+                height: 64px;
+                background-color: $bg-secondary;
+            }
+        }
+    }
+
+    .itemBonusBlock {
+        height: 35px;
+        background-color: $bg-secondary;
+    }
+
+    .popupBlock {
+        &__shortDescription {
+            background-color: $bg-secondary;
+        }
+        &__description {
+            height: 100%;
+            background-color: $bg-secondary;
+        }
+    }
+}

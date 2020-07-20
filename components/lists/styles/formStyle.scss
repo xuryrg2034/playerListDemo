@@ -1,0 +1,62 @@
+@import "../../../globalStyles/variables";
+
+.listPopup {
+    max-width: 548px;
+    width: 100%;
+    &__title {
+        color: $text-tertiary;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__description {
+        margin-top: 22px;
+        height: 281px;
+        margin-bottom: 10px;
+
+        .ck-editor-custom-style {
+            height: 100%;
+        }
+    }
+}
+
+.skeletonListForm {
+    .skeletonListForm__title {
+        background-color: $bg-secondary;
+        height: 42px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .listPopup__title {
+        height: 20px;
+        background-color: $bg-secondary;
+    }
+
+    .listPopup__description {
+        background-color: $bg-secondary;
+    }
+}
+
+
+.playerListPage-mobile {
+    .listPopup {
+        margin-top: 0;
+        max-width: 100%;
+        height: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        @include mobilePaddingContainer;
+
+        &__title {
+            font-size: 12px;
+        }
+        &__description {
+            height: 75vh;
+        }
+
+        .headerMobile {
+            padding: 0;
+        }
+    }
+}

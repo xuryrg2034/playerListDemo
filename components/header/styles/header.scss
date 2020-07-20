@@ -1,0 +1,47 @@
+@import "../../../globalStyles/variables";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    background-color: $bg-primary-dark;
+    padding: 0 24px;
+    z-index: 10;
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 24px;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        color: $text-grey;
+        transition: opacity .175s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__email {
+        color: #888F94;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+    }
+}
+
+.mobileMenu {
+
+}

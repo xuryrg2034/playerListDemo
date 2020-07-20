@@ -1,0 +1,70 @@
+@import "../../../globalStyles/variables";
+
+.magicSpellBlock {
+    display: flex;
+    position: relative;
+    padding-bottom: 14px;
+    padding-top: 12px;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 1px;
+        background-color: $separator;
+    }
+
+    &:last-of-type {
+        &:before {
+            display: none;
+        }
+    }
+
+    &__list {
+        margin-right: -10px;
+        &_customScroll {
+            padding-right: 30px;
+        }
+    }
+
+    &__btnCreate {
+        position: relative;
+        transition: opacity 0.175s ease-in-out;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            bottom: -4px;
+            left: -4px;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__left {
+        margin-right: 29px;
+        flex-shrink: 0;
+    }
+    &__right {
+        margin-top: -12px;
+        width: 100%;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //position: sticky;
+        //top: 10px;
+        background-color: $bg-primary;
+        padding: 12px 18px;
+        margin: 0 -18px;
+    }
+
+    &__filter {
+        display: flex;
+    }
+}

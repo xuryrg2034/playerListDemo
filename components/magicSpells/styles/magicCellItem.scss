@@ -1,0 +1,117 @@
+@import "../../../globalStyles/variables";
+
+.magicCellItem {
+    width: 77px;
+    &-wrapper {
+        position: sticky;
+        top: 20px;
+        &-dropdownVisible {
+            z-index: 10;
+        }
+    }
+    &__title {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: $text-secondary;
+        margin-bottom: 6px;
+        transition: opacity 0.175s ease-in-out;
+    }
+    &__infoWrapper {
+        cursor: pointer;
+        &:hover {
+            .magicCellItem__title {
+                opacity: 0.8;
+            }
+        }
+    }
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        margin-top: 6px;
+        box-shadow: $box-shadow;
+        background-color: $bg-primary;
+        padding: 14px 18px;
+        width: 267px;
+        z-index: 2;
+        &_btn {
+            position: relative;
+            font-weight: 500;
+            color: $text-primary;
+            font-size: 16px;
+            line-height: 20px;
+            transition: opacity 0.175s ease-in-out;
+            padding: 9px 0;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: $separator;
+            }
+            &:last-of-type {
+                &:before {
+                    display: none;
+                }
+            }
+            &-red {
+                color: $highlight;
+            }
+        }
+    }
+    &__overlay {
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    &__viewCells {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -2px;
+        max-width: 64px;
+        &_item {
+            display: block;
+            flex-shrink: 0;
+            width: 12px;
+            height: 12px;
+            margin: 2px;
+            background-color: #D6CFC1;
+            &-full {
+                background-color: $highlight;
+            }
+        }
+    }
+    &__maxCount {
+        display: flex;
+        justify-content: space-between;
+        &_labelText {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            color: $text-primary;
+        }
+
+        .customElem {
+            &__label {
+                width: 50px;
+                &:before {
+                    display: none !important;
+                }
+            }
+            &__input {
+                text-align: right;
+            }
+        }
+    }
+}

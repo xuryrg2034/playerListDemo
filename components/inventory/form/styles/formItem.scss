@@ -1,0 +1,166 @@
+@import "../../../../globalStyles/variables";
+
+.createItemPopup {
+    max-width: 908px;
+    min-height: 430px;
+    padding: 29px;
+
+    .popupBlock__submitBtn {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+    }
+
+    .magicSpellPopup__form {
+        &_left {
+            min-height: 300px;
+        }
+    }
+
+    .popupBlock__inputTitle-wrapper .customElem__input {
+        line-height: 32px;
+    }
+}
+
+.itemBonusBlock {
+    margin-bottom: 14px;
+    &__btn {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: opacity 0.175s ease-in-out;
+        cursor: pointer;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: $text-secondary;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 4px;
+            bottom: 0;
+            height: 1px;
+            background-color: $separator;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        svg {
+            margin-top: -1px;
+            margin-right: 4px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        .customElem {
+            &__label {
+                &:before {
+                    display: none;
+                }
+            }
+            &__input {
+                text-align: right;
+            }
+        }
+
+        .custom-list-select {
+            cursor: pointer;
+            &:before {
+                display: none;
+            }
+
+            .options-wrapper {
+                right: auto;
+                left: 10px;
+            }
+        }
+    }
+
+    &__table {
+        display: table;
+        &_cell {
+            display: table-cell;
+            border-bottom: 1px solid $separator;
+        }
+        &_row {
+            display: table-row;
+            &-last {
+                .itemBonusBlock__table_cell {
+                    border: none;
+                }
+            }
+        }
+        &_header {
+            .itemBonusBlock__table_cell {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 12px;
+                text-align: right;
+                letter-spacing: 0.04em;
+                color: $text-tertiary;
+                border: none;
+            }
+        }
+    }
+}
+
+.itemBonusBlock__attack {
+    &_characteristic {
+        width: 65px;
+    }
+    &_dice {
+        width: 145px;
+        padding-left: 15px;
+    }
+    &_damage {
+        width: 48px;
+        padding-left: 5px;
+    }
+    &_penetration {
+        width: 48px;
+        padding-left: 5px;
+    }
+}
+
+
+.formItemSkeleton {
+    &__icon {
+        width: 64px;
+        height: 64px;
+        background-color: $bg-secondary;
+        margin-right: 10px;
+    }
+
+    .magicSpellPopup {
+        &__header {
+            &_right {
+                width: 100%;
+                height: 64px;
+                background-color: $bg-secondary;
+            }
+        }
+    }
+
+    .itemBonusBlock {
+        height: 35px;
+        background-color: $bg-secondary;
+    }
+
+    .popupBlock {
+        position: relative;
+        left: 8px;
+        &__shortDescription {
+            background-color: $bg-secondary;
+        }
+        &__description {
+            height: 100%;
+            background-color: $bg-secondary;
+        }
+    }
+}

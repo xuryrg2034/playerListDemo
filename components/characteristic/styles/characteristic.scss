@@ -1,0 +1,138 @@
+@import "../../../globalStyles/variables";
+
+.characteristicsBlock {
+    margin-top: 29px;
+    margin-bottom: 14px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        &_title {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: .04em;
+            color: $text-tertiary;
+        }
+        .characteristicsBlock__input {
+            height: 0;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: .06em;
+        color: $text-primary;
+        width: 30px;
+        margin-right: 37px;
+    }
+
+    &__input {
+        color: $highlight;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        width: 42px;
+        height: 32px;
+        text-align: center;
+        margin-right: 7px;
+        &:focus {
+            background-color: $bg-tertiary;
+        }
+    }
+    &__equipmentBonus {
+        margin-right: 15px;
+        min-width: 42px;
+        text-align: right;
+    }
+    &__modifierBonus {
+        min-width: 38px;
+        text-align: right;
+    }
+    &__row {
+        display: flex;
+        height: 39px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $separator;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $bg-primary;
+            box-shadow: $box-shadow;
+            border-color: transparent;
+            margin-right: -37px;
+            padding-right: 37px;
+            padding-left: 8px;
+            margin-left: -8px;
+            .characteristicsBlock__savingThrowsBonus_toggleElem {
+                visibility: visible;
+            }
+        }
+        &_left,
+        &_right {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: .06em;
+        color: $text-primary;
+        width: 37px;
+        margin-right: 30px;
+    }
+    &__lightText {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: .02em;
+        color: $text-tertiary;
+    }
+    &__savingThrowsBonus {
+        position: relative;
+        min-width: 30px;
+        text-align: right;
+        padding-left: 21px;
+        box-sizing: content-box;
+        &_label {
+            display: block;
+            cursor: pointer;
+        }
+        &_num {
+            display: inline-block;
+            position: relative;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: $text-primary;
+        }
+        &_value-wield {
+            position: relative;
+            .characteristicsBlock__savingThrowsBonus_num:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -2px;
+                right: -6px;
+                bottom: -2px;
+                left: -6px;
+                background: rgba(56,48,44,.1);
+                border-radius: 6px;
+            }
+        }
+        &_toggleElem {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: -32px;
+            top: 0;
+            bottom: 0;
+            visibility: hidden;
+        }
+    }
+}
